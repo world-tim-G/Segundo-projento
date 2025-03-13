@@ -1,0 +1,52 @@
+Aluno
+-------
+alunoID PK int
+Nome varchar(100)
+DataNascimento date
+Endereco varchar(250)
+Telefone varchar(15)
+Email verchar(100)
+DataMatricula date 
+PaisID int FK >- Pais.paisID
+
+Professor
+-------
+Professor PK int
+Nome varchar(100)
+DataNascimento date
+Endereco varchar(250)
+Salario decimal(10,2)
+Telefone varchar(100)
+Email verchar(100)
+Disciplina varchar(100)
+AlunoID int fk >- Aluno.AlunoID
+
+Coordernador
+-------
+CoodernadorID PK int
+Nome varchar(100)
+DataNascimento Date
+Endereco Varchar(250)
+salario Decimal(10,2)
+Email verchar(100)
+Diciplina Varchar(100)
+Telefone Varchar(100)
+Professor int fk >- Professor.Professor
+
+Pais
+-------
+PaisID PK int
+Nome varchar(100)
+DataNascimento Date
+Endereco Varchar(250)
+Email verchar(100)
+
+Escola
+-------
+ID PK int
+Nome Verchar(100)
+Telefone Varchar(100)
+Endereco Varchar(100)
+AlunoID int fk >- Aluno.AlunoID
+ProfessorID int fk >- Professor.ProfessorID
+CoodernadorID int fk >- Coodernador.CoodernadorID
